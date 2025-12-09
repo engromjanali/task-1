@@ -1,7 +1,7 @@
 ## Project Name : Task One
 
 ### features
-1. dark/loght mode
+1. dark/light mode
 2. Landing page
 3. Sign in,
 4. Sign Up
