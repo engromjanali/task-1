@@ -1,4 +1,4 @@
-# Project Name : TASK ONE
+## Project Name : Task One
 
 ### features
 1. dark/loght mode
@@ -8,7 +8,7 @@
 5. validation
 6. if success show a welcome shackbar.
 
-Note: if the auth pop-up has disposed dpuble tap to top;
+Note: if the auth pop-up has disposed dpuble tap to open;
 
 ## screens
 !["no image found"](ss/1.jpg)
