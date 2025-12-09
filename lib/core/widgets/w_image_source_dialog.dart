@@ -15,7 +15,7 @@ Future<ImageSource?> WISSDialog(BuildContext context) async {
       gapY(40),
       WCElevatedButton(
         ontap: () {
-          Navigation.pop(data: ImageSource.gallery);
+          Navigator.pop(context, ImageSource.gallery);
         },
         label: "Photo Library",
         backgroundColor: context.primaryTextColor,
@@ -24,7 +24,7 @@ Future<ImageSource?> WISSDialog(BuildContext context) async {
       ),
       WCElevatedButton(
         ontap: () {
-          Navigation.pop(data: ImageSource.camera);
+          Navigator.pop(context, ImageSource.camera);
         },
         label: "Camera",
         backgroundColor: context.backgroundColor,

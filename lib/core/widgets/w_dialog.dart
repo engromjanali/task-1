@@ -204,7 +204,7 @@ class _WConfirmDialog extends StatelessWidget {
         if (okButton == true)
           WPrimaryButton(
             text: "Okay",
-            onTap: () => Navigation.pop(),
+            onTap: () => Navigator.pop(context),
             width: 130.w,
           )
         else
@@ -213,7 +213,7 @@ class _WConfirmDialog extends StatelessWidget {
               Expanded(
                 child: WPrimaryButton.border(
                   text: 'No',
-                  onTap: () => Navigation.pop(),
+                  onTap: () => Navigator.pop(context),
                 ),
               ),
               gapX(10),

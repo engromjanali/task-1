@@ -13,20 +13,11 @@ import 'package:power_state/power_state.dart';
 void main() async {
   await init();
   runApp(DevicePreview(enabled: false, builder: (context) => _SCheckPoint()));
-  // runApp(const _SCheckPoint());
 }
 
 Future<void> init() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  //   await CNotification().requestPermission();
-  //   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
-  //   await CNotification().initNotification();
-  // init base method otherwise we may get an error like "xyz was not initialized".
-  // await SharedPrefService.instance.init();
-  // await EncryptionService().init();
-  // await DBHelper.getInstance.init();
 }
 
 class _SCheckPoint extends StatefulWidget {
@@ -94,7 +85,6 @@ class __SCheckPointState extends State<_SCheckPoint> {
               },
 
               home: SpalshScreen(),
-              // home: InfinityScroll(),
             );
           },
         );

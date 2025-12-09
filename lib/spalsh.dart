@@ -2,9 +2,6 @@ import 'package:task_one/core/controllers/c_check_point.dart';
 import 'package:task_one/core/extensions/ex_build_context.dart';
 import 'package:task_one/core/extensions/ex_padding.dart';
 import 'package:task_one/core/functions/f_printer.dart';
-import 'package:task_one/core/functions/f_snackbar.dart';
-import 'package:task_one/core/services/navigation_service.dart';
-import 'package:task_one/features/auth/widget/w_sign_in.dart';
 import 'package:task_one/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,7 +16,6 @@ class SpalshScreen extends StatefulWidget {
 class _SpalshScreenState extends State<SpalshScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     checkAuth();
   }

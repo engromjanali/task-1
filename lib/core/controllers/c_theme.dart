@@ -1,13 +1,17 @@
+import 'package:power_state/power_state.dart';
 import 'package:task_one/core/constants/colors.dart';
 import 'package:task_one/core/constants/dimension_theme.dart';
-import 'package:task_one/core/controllers/c_base.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CTheme extends CBase {
+class CTheme extends PowerController {
   int currentIndex = 0;
   late List<ThemeData> themeList = [_lightTheme, _darkTheme];
   ThemeData get currentTheme => themeList[currentIndex];
+
+  void update() {
+    notifyListeners();
+  }
 
   void updateTheme({int? index}) async {
     currentIndex = index ?? (currentIndex == 0 ? 1 : 0);

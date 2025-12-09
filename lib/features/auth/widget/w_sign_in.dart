@@ -18,7 +18,7 @@ import 'package:image_picker/image_picker.dart';
 
 class WSignIn extends StatefulWidget {
   final Function()? onNavigate;
-  WSignIn({super.key, this.onNavigate});
+  const WSignIn({super.key, this.onNavigate});
 
   @override
   State<WSignIn> createState() => _WSignInState();
@@ -26,15 +26,10 @@ class WSignIn extends StatefulWidget {
 
 class _WSignInState extends State<WSignIn> {
   GlobalKey<FormState> fromKey = GlobalKey<FormState>();
-
   ValueNotifier<bool> isSignin = ValueNotifier(true);
-
   ValueNotifier<XFile> pickedImage = ValueNotifier(XFile(""));
-
   TextEditingController nameController = TextEditingController();
-
   TextEditingController emailController = TextEditingController();
-
   TextEditingController passController = TextEditingController();
 
   @override
@@ -99,12 +94,10 @@ class _WSignInState extends State<WSignIn> {
                         if (!(value ?? "").isValidEmail) {
                           return "Invalid Email!";
                         }
-                        print("done");
                         return null;
                       },
                       prefixIconPath: Assets.icons.email,
                     ).withKey(ValueKey("email")),
-
                     WTextField.obsecureText(
                       controller: passController,
                       label: "Password",
@@ -151,7 +144,6 @@ class _WSignInState extends State<WSignIn> {
                     ontap: () {
                       if (fromKey.currentState?.validate() ?? false) {
                         widget.onNavigate?.call();
-                        // SShop().push();
                       }
                     },
                     label: value ? "Sign In" : "Sign Up",
@@ -159,7 +151,6 @@ class _WSignInState extends State<WSignIn> {
                   ).pT(),
                 ],
               ),
-
               // social login
               if (value)
                 Row(
